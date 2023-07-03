@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add product</title>
+</head>
+<body>
+    <h1>
+            Update product screen
+    </h1>
+    <form action="/updateproduct/{{product.id}}" method="post">
+        <div>
+            <label for="name">name</label>
+            <input type="text" name="name" value=" {{product.name}}"/>
+        </div>
+        <div>
+            <label for="description">description</label>
+            <input type="text" name="description" value=" {{product.description}}"/>
+        <div>
+        <div>
+            <label for="rating">rating</label>
+            <input type="text" name="rating" value=" {{product.rating}}"/>
+        </div>
+        <div>
+            <label for="price">price</label>
+            <input type="text" name="price" value=" {{product.price}}"/>
+        </div>
+        <div>
+            <label for="image">image</label>
+            <input type="text" name="image" value=" {{product.image}}"/>
+        </div>
+        <input type="submit" value="Update product"/>
+    </form>
+</body>
+</html>

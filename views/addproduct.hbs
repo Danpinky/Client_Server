@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add product</title>
+</head>
+<body>
+    <h1>
+        {{#if product }}
+            Update product screen
+        {{else}}
+            Add new product screen
+        {{/if}}
+    </h1>
+    <form action="/addproduct/{{#if product}}{{product.id}}{{/if}}" method="post">
+        <div>
+            <label for="name">name</label>
+            <input type="text" name="name" value="{{#if product}} {{product.name}} {{/if}}"/>
+        </div>
+        <div>
+            <label for="description">description</label>
+            <input type="text" name="description" value="{{#if product}} {{product.description}} {{/if}}"/>
+        <div>
+        <div>
+            <label for="rating">rating</label>
+            <input type="text" name="rating" value="{{#if product}} {{product.rating}} {{/if}}"/>
+        </div>
+        <div>
+            <label for="price">price</label>
+            <input type="text" name="price" value="{{#if product}} {{product.price}} {{/if}}"/>
+        </div>
+        <div>
+            <label for="image">image</label>
+            <input type="text" name="image" value="{{#if product}} {{product.image}} {{/if}}"/>
+        </div>
+        <input type="submit" value="{{#if product}}Update product{{else}}Add product{{/if}}"/>
+    </form>
+</body>
+</html>
